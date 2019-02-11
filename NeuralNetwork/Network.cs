@@ -95,20 +95,19 @@ namespace BetterOverwatch
     }
     public class BetterOverwatchNetworks
     {
-        public const int matrixWidth = 10;
-        public const int matrixHeight = 10;
+        public const int matrixWidth = 5;
+        public const int matrixHeight = 8;
         public static BackPropNetwork mapsNN = new BackPropNetwork(new int[3] { matrixWidth * matrixHeight, (matrixWidth * matrixHeight + 26) / 2, 26 });
         public static BackPropNetwork teamSkillRatingNN = new BackPropNetwork(new int[3] { matrixWidth * matrixHeight, (matrixWidth * matrixHeight + 10) / 2, 10 });
         public static BackPropNetwork skillRatingNN = new BackPropNetwork(new int[3] { matrixWidth * matrixHeight, (matrixWidth * matrixHeight + 10) / 2, 10 });
-        public static BackPropNetwork statsNN = new BackPropNetwork(new int[3] { matrixWidth * matrixHeight, (matrixWidth * matrixHeight + 50) / 2, 50 });
+        public static BackPropNetwork numbersNN = new BackPropNetwork(new int[3] { matrixWidth * matrixHeight, (matrixWidth * matrixHeight + 10) / 2, 10 });
         public static BackPropNetwork heroNamesNN = new BackPropNetwork(new int[3] { matrixWidth * matrixHeight, (matrixWidth * matrixHeight + 26) / 2, 26 });
 
         public static void Load()
         {
             mapsNN.LoadFromArray(Data.mapsNNData);
             teamSkillRatingNN.LoadFromArray(Data.teamSkillRatingNNData);
-            skillRatingNN.LoadFromArray(Data.skillRatingNNData);
-            statsNN.LoadFromArray(Data.statsNNData);
+            numbersNN.LoadFromArray(Data.numbersNNData);
             heroNamesNN.LoadFromArray(Data.heroNamesNNData);
         }
     }

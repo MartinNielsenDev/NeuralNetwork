@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Drawing.Imaging;
+using System.Drawing;
 using NeuralNetwork;
 using NeuralNetwork.Patterns;
 using NeuralNetwork.Backprop;
-using System.Drawing.Imaging;
-using System.Drawing;
 
 namespace BetterOverwatch
 {
@@ -15,8 +15,9 @@ namespace BetterOverwatch
         private int OutputPatternIndex(Pattern pattern)
         {
             for (var i = 0; i < pattern.OutputsCount; i++)
-                if (pattern.Output[i] == 1)
-                    return i;
+            {
+                if (pattern.Output[i] == 1) return i;
+            }
             return -1;
         }
 
@@ -39,7 +40,6 @@ namespace BetterOverwatch
                         result = i;
                     }
                 }
-
                 return result;
             }
         }

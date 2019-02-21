@@ -102,6 +102,7 @@ namespace BetterOverwatch
         public static BackPropNetwork skillRatingNN = new BackPropNetwork(new int[3] { matrixWidth * matrixHeight, (matrixWidth * matrixHeight + 10) / 2, 10 });
         public static BackPropNetwork numbersNN = new BackPropNetwork(new int[3] { matrixWidth * matrixHeight, (matrixWidth * matrixHeight + 10) / 2, 10 });
         public static BackPropNetwork heroNamesNN = new BackPropNetwork(new int[3] { matrixWidth * matrixHeight, (matrixWidth * matrixHeight + 26) / 2, 26 });
+        public static BackPropNetwork playersNN = new BackPropNetwork(new int[3] { matrixWidth * matrixHeight, (matrixWidth * matrixHeight + 35) / 2, 35 });
 
         public static void Load()
         {
@@ -109,6 +110,7 @@ namespace BetterOverwatch
             teamSkillRatingNN.LoadFromArray(Data.teamSkillRatingNNData);
             numbersNN.LoadFromArray(Data.numbersNNData);
             heroNamesNN.LoadFromArray(Data.heroNamesNNData);
+            playersNN.LoadFromArray(Data.playersNNData);
         }
     }
 }

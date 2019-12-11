@@ -112,7 +112,6 @@ namespace BetterOverwatch
             numbersNN.LoadFromArray(Data.numbersNNData);
             heroNamesNN.LoadFromArray(Data.heroNamesNNData);
             playersNN.LoadFromArray(Data.playersNNData);
-
         }
     }
 }
